@@ -1,22 +1,2 @@
 # Guess-The-Number-Game
 Beginner Python Project - Guess The Number Game
-import random
-random_number = random.randint(1,20)
-print('I am thinking of a number between 1 and 20.')
-
-#Ask The Player to guess 6 times
-for guessesTaken in range(1,7):
-    print ('Take a guess.')
-    guess = int(input())
-        
-    if guess < random_number:
-        print('Sorry, guess again. Too low.')
-    elif guess > random_number:
-        print('Sorry, guess again. Too high,')
-    else: 
-        break # This condition is the right guess
-        
-if guess == random_number:
-    print('Yay, congrats. You have guessed my number in ' + str(guessesTaken) + ' guesses!')
-else: 
-    print('Nope, The number I was thinking of was ' + str(random_number))
